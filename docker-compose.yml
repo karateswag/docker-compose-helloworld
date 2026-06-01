@@ -7,10 +7,10 @@ services:
       - traefik
     volumes:
       - ./html:/usr/share/nginx/html
-  labels:
-    - "traefik.enable=true"
-    - "traefik.http.routers.app.rule=Host(`helloworld.${DOMAIN}`)"
-    - "traefik.http.services.app.loadbalancer.server.port=80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`helloworld.${DOMAIN}`)"
+      - "traefik.http.services.app.loadbalancer.server.port=80"
 
 networks:
   traefik:
