@@ -6,7 +6,7 @@ services:
     networks:
       - traefik
     volumes:
-      - ./index.html:/usr/share/nginx/html/index.html
+      - ./:/usr/share/nginx/html/
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.app.rule=Host(`helloworld.${DOMAIN}`)"
